@@ -1,0 +1,90 @@
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.sibling {
+  display: flex;
+  margin: auto;
+  padding: 2em;
+  background: linear-gradient(to left, #ff4500, #670f);
+}
+
+.spinner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  font-size: 2rem;
+  overflow: hidden;
+  mix-blend-mode: overlay;
+  animation: text-color 2s ease-in-out infinite alternate;
+  
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border: 15px solid transparent;
+  border-radius: 100px;
+  animation: spin-in 2s ease-in-out infinite alternate;
+}
+
+.spinner::before {
+  border-left-color: blue;
+  border-top-color: red;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+}
+
+.spinner::after {
+  border-right-color: green;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes spin-in {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes text-color {
+  0% {
+    color: rgba(0, 0, 0, 1);
+  }
+
+  50% {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  100% {
+    color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+.bg-color {
+    background-image:repeating-conic-gradient(from 45deg, #00f 0deg 90deg, #ff4500  90deg 180deg);
+    width: 20em;
+    height: 20em;
+    background-size: 1em 1em;
+}
+
+@media (max-width:890px) {
+  .sibling {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

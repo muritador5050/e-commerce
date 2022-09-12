@@ -1,0 +1,42 @@
+
+.outer {
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.h3-items, .cart-length, .checkout {
+    text-align: center;
+    padding: .5rem;
+}
+
+.cart-list {
+    background-color: #ff4500;
+    width: 25rem;
+    height: fit-content;
+    border-radius: 1rem;
+}
+
+.product-image {
+    width: 10rem;
+    height: 10rem;
+}
+
+.class-items {
+  margin: .5rem;
+ 
+}
+
+.image-carts{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+
+.image-cart {
+    object-fit: cover;
+    width: 30rem;
+    height: 15rem;
+}
+

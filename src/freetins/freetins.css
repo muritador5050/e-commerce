@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.list-items {
+   margin-left: 2em;
+}
+
+.shoes {
+    width: 10rem;
+    height: 10rem;
+    padding: .5em;
+}
+
+.name {
+margin-left: 1em;
+}
+
+
+.bt-item {
+    padding: .2em;
+    width: 15em;
+    background-color: #ff4500;
+    border-radius: .5em;
+    border: none;
+    cursor: pointer;
+}
